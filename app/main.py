@@ -1,26 +1,15 @@
-from flask import Flask
- 
+from flask import Flask, jsonify, redirect, url_for, request
+
 app = Flask(__name__)
- 
-@app.route("/")
-def home_view():
-        return "<h1>Welcome to Geeks for Geeks</h1>"
-        
-# from flask import Flask, redirect, url_for, request
-# app = Flask(__name__)
-  
-# @app.route('/success/<name>')
-# def success(name):
-#    return 'welcome %s' % name
-  
-# @app.route('/login',methods = ['POST', 'GET'])
-# def login():
-#    if request.method == 'POST':
-#       user = request.form['nm']
-#       return redirect(url_for('success',name = user))
-#    else:
-#       user = request.args.get('nm')
-#       return redirect(url_for('success',name = user))
-  
-# if __name__ == '__main__':
-#    app.run(debug = True)
+
+@app.route('/service',methods = ['POST', 'GET'])
+def service_api():
+   if request.method == 'POST':
+      data = json.loads(request.data)
+      text = data.get("text",None)
+      if text is None:
+         return jsonify({"message":"text not found"})
+      else:
+         return jsonify(data)
+   if request.method == 'GET':
+      return "<h1>Welcome to Geeks for Geeks</h1>"
