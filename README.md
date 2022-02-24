@@ -1,5 +1,5 @@
 # Despliegue de Flask - Python Intensivo
-Aplicación sencilla hecha en Flask y Gunicorn para desplegar en Heroku. Parte del curso Python Intensivo.
+Aplicación sencilla hecha en Flask y Gunicorn para desplegar en Heroku. Parte del curso Python Intensivo (ver [Presentación - Módulo 5](https://docs.google.com/presentation/d/1Ye8P80lu6d4M7IxkaYXbNp7F0gu2goyQxW9emikGKMc/edit?usp=sharing)).
 
 * Crear una cuenta de Heroku
 * Descargar e instalar Heroku CLI, Git y algún editor IDE (como Visual Studio Code).
