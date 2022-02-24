@@ -11,7 +11,7 @@ Aplicación sencilla hecha en Flask y Gunicorn para desplegar en Heroku. Parte d
   >heroku git:remote -a nombre-de-tu-app
   * `Esto vinculará tu proyecto con el gestor de versiones online de heroku.`
 * Para desplegar
-  >git push heroku main
+  >git push heroku master
   * `Esto 'empujará' tus cambios hacia el repositorio online de heroku y hará público tu proyecto.`
 * Aún falta encender tu servidor. Ejecuta en la línea de comandos:
   >heroku ps:scale web=1
